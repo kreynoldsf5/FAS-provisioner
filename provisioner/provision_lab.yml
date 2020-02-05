@@ -21,6 +21,16 @@
       include_role:
         name: aws_check_setup
 
+# Create an admin password for use in this Lab
+- name: Create lab admin password
+  hosts: localhost
+  gather_facts: False 
+  tasks:
+   - set_fact:
+       admin_password: "{{ lookup('password', '/dev/null length=16 chars=ascii_letters,digits,punctuation') }}"
+   - debug:
+       msg: "{{ my_pass }}"
+
 # Create AWS infrastructure - VPC/Subnet/Route table etc.
 # Grab AMI for ansible control node (centos) and deploy EC2 instance
 # Grab AMI for webservers (centos) and deploy EC2 instance

@@ -6,10 +6,6 @@ ec2_name_prefix: TESTWORKSHOP2
 # amount of work benches to provision
 student_total: 1
 
-## Optional Variables
-# password used for student account on control node
-admin_password: ansible
-
 # DO NOT CHANGE
 # workshop runs in F5 mode
 workshop_type: f5

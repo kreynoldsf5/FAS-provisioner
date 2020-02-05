@@ -1,4 +1,3 @@
-admin_password: ansible
 s3_state: "present"
 teardown: false
 workshop_type: ""
